@@ -286,12 +286,13 @@ extension PhotosViewController {
 
         // Camera shouldn't be selected, but pop the UIImagePickerController!
         if let composedDataSource = composedDataSource , composedDataSource.dataSources[indexPath.section].isEqual(cameraDataSource) {
-            let cameraController = UIImagePickerController()
-            cameraController.allowsEditing = false
-            cameraController.sourceType = .camera
-            cameraController.delegate = self
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "takePicture"), object: nil)
+            //let cameraController = UIImagePickerController()
+            //cameraController.allowsEditing = false
+            //cameraController.sourceType = .camera
+            //cameraController.delegate = self
             
-            self.present(cameraController, animated: true, completion: nil)
+            //self.present(cameraController, animated: true, completion: nil)
             
             return false
         }

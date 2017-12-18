@@ -4,9 +4,9 @@ platform :ios, '8.0'
 
 target 'BSImagePicker_Example' do
   pod "BSImagePicker", :path => "../"
+  pod "SwiftyCam"
 end
 
 target 'BSImagePicker_Tests' do
   pod "BSImagePicker", :path => "../"
 end
-
